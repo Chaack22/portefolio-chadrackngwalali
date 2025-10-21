@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Connexion - Portfolio{% endblock title %}
+
+{% block content %}
+<main class="main-container">
+
+    <section class="main-content">
+        <div class="card">
+            <h1>Laissez-moi un message</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {% if form.non_field_errors %}
+                    <div class="form-errors">
+                        {% for error in form.non_field_errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {{ form.as_p }}
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+{% endblock content %}

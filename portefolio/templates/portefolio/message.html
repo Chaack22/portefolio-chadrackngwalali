@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Compte - Portfolio{% endblock title %}
+
+{% block content %}
+<main class="main-container">
+
+    <section class="main-content">
+        <div class="card">
+            <h1>Portefolio</h1>
+            
+        </div>
+
+        <div class="card">
+            <h2>Messages</h2>
+            <ul>
+                {% for mesg in msg %}
+                    <li> 
+                        <p><b>{{ mesg.nom}}</b><br>
+                            {{ mesg.telephone}}<br>
+                            {{ mesg.email}}<br>
+                            <b>Message :</b> {{ mesg.message}}
+                        </p>
+                    </li>
+                {% empty %}
+                    <p>Vous n'avez aucun message pour le moment.</p>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <div>
+        {% comment %} formulaire de deconnexion ici {% endcomment %}
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Se déconnecter</button>
+        </form>
+    </div>
+
+</main>
+{% endblock content %}

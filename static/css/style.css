@@ -1,0 +1,125 @@
+/* ======= Reset / Global ======= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #2e86de;
+}
+
+a:hover {
+    color: #1b4f72;
+}
+
+/* ======= Dark Mode ======= */
+body.dark-mode {
+    background: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark-mode a {
+    color: #74b9ff;
+}
+
+/* ======= Layout ======= */
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+
+.main-content {
+    flex: 2 1 600px;
+}
+
+
+/* ======= Card ======= */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+body.dark-mode .card {
+    background: #2c2c2c;
+}
+
+/* ======= Profile ======= */
+.profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #2e86de;
+}
+
+/* ======= Headings ======= */
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+.main-header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ======= List ======= */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+
+/* ======= Dark Mode Toggle ======= */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2e86de;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* ======= Responsive ======= */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar, .main-content {
+        max-width: 100%;
+    }
+}

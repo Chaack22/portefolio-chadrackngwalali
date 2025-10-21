@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home - Portfolio{% endblock title %}
+
+{% block content %}
+<main class="main-container">
+    <!-- Partie gauche -->
+    <aside class="sidebar">
+        <!-- Photo -->
+        <div class="profile-pic">
+            <img src="{% static 'img/2025_08_13_18_40_IMG_3431.PNG' %}" alt="photo de profil">
+        </div>
+
+        <!-- Contact -->
+        <div class="card">
+            <h2>Contact</h2>
+            <ul>
+                <li><i class="fa-solid fa-envelope"></i> chadrackngwalali@gamil.com</li>
+                <li><i class="fa-solid fa-phone"></i> +243 82 522 3506</li>
+                <li><a href="{% url 'send_message' %}">Laissez-moi un message</a></li>
+            </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="card">
+            <h2>Education</h2>
+            <h3>Diplôme d'État</h3>
+            <p>Collège Saint Pie X - Kinshasa - 2023</p>
+            <h3>Études universitaires en cours</h3>
+            <p>Institut Supérieur d'Informatique, Programmation et Analyse - Kinshasa - 2023 - en cours<br>
+            Licence en Intelligence Artificielle</p>
+        </div>
+
+        <!-- Compétences -->
+        <div class="card">
+            <h2>Compétences</h2>
+            <h3>Techniques</h3>
+            <ul>
+                <li>Python </li>
+                <li>Dart </li>
+                <li>Django, Tkinter & CustomTkinter</li>
+            </ul>
+            <h3>Artistiques</h3>
+            <ul>
+                <li>Pianiste, concerts & studio</li>
+                <li>Composition musicale et accompagnement</li>
+            </ul>
+        </div>
+
+        <!-- Langues -->
+        <div class="card">
+            <h2>Langues</h2>
+            <ul>
+                <li>Français : Intermédiaire</li>
+                <li>Anglais : débutant</li>
+                <li>Japonais : débutant</li>
+                <li>Lingala : Avancé / Courant</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Partie droite -->
+    <section class="main-content">
+        <div class="card main-header">
+            <h1>Chadrack Ngwalali</h1>
+            <ul>
+                <li>Développeur</li>
+                <li>Décorateur</li>
+                <li>Etudiant</li>
+                <li>Ingénieur du son</li>
+                <li>Musicien</li>
+            </ul>
+        </div>
+        
+        
+        <div class="card">
+            <h2>À propos de moi</h2>
+            <p>
+                Étudiant et développeur en formation, passionné par la création de solutions innovantes. 
+                Actuellement en deuxième année de Licence en Intelligence Artificielle, je me forme à divers langages 
+                et technologies afin de transformer des idées complexes en applications fonctionnelles. 
+                En dehors du codage, je suis également décorateur d’intérieur et ingénieur du son.
+            </p>
+
+            
+        </div>  
+        
+
+        <div class="card">
+            <h2>Expérience</h2>
+            <h3>Décorateur d’intérieur / Staffeur et Peintre</h3>
+            <p>Equipe Warrior(Mak design) - Kinshasa - 2021 - présent</p>
+            <h3>Ingénieur du son</h3>
+            <p>Eglise Gethsemane - Kinshasa - 2020 - présent</p>
+            <ul>
+                <li>Mixage audio pour événements en direct</li>
+                <li>Gestion du câblage et matériel audio</li>
+                <li>Utilisation d’équipements professionnels</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Références</h2>
+            <p>Disponibles sur demande.</p>
+        </div>
+    </section>
+</main>
+{% endblock content %}
